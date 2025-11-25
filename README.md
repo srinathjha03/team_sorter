@@ -1,26 +1,25 @@
- Fair Team Generator
+Fair Team Sorter 
 
-A simple Python tool designed to solve the real-life problem of creating balanced sports teams for pickup games or PE classes.
+1. Overview
+The "Fair Team Segregator" is a Python command-line tool. Its goal is to address the widespread issue of assembling balanced teams for games or sports. An organizer can enter a list of players and give each one a numerical skill rating (1–10) using the tool.
 
- Problem It Solves:
+2. Problem Description
+The project tackles the problem of manually selected teams, which frequently lead to unfair, lopsided matchups, are slow to form, and are susceptible to social bias. Frustration and boring activities may result from this imbalance. This tool offers a quick, easy, and impartial substitute.
+Essential Features & Algorithm
 
-In casual sports (football, basketball, volleyball), picking teams manually often leads to one side being much stronger than the other. This script distributes skill evenly, ensuring a fair and competitive match.
+3.The program follows a straightforward workflow:
 
-How to Run:
+Player names and skill levels are entered iteratively by the user.
 
-Ensure you have Python installed.
-Download fair_teams.py.
-Open your terminal or command prompt.
+The system uses a greedy algorithm after data entry is finished (marked by typing 'done').
 
-Usage:
+All players are first sorted by skill rating in descending order.
 
-Enter a player's Name.
-Enter their Skill Level (1 to 10).
-Repeat for all players.
-Type done when finished adding players.
-The program will instantly calculate and display two balanced teams (Team A and Team B) and show the total skill difference.
+After that, it iterates through this sorted list, adding each player one at a time to the team with the lower total skill score at the moment.
 
- How it Works:
-Data Collection: The program collects a list of players and their skill ratings.
-Sorting: It sorts all players from strongest to weakest.
-Distribution: It iterates through the sorted list and assigns the next player to whichever team currently has the lower total skill score. This minimizes the skill gap between the two sides.
+In order to ensure a fair matchup, it lastly shows the rosters for Teams A and B, their total skill scores, and the absolute difference between them.
+
+4. Important Takeaways & Upcoming Improvements
+The project shows how a straightforward heuristic (a greedy algorithm) can solve a complicated problem (the "partition problem") quickly and very successfully. Important lessons learned include the value of defensive programming (such as try-except blocks) for user input and the strength of sorting data as a fundamental algorithmic step.
+
+Future improvements might include developing a web-based graphical user interface (GUI), enabling the saving of player lists, and extending the algorithm to enable segregation into more than two teams.
